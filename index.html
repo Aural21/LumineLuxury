@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>lumine luxury</title>
+
+    <!-- TIPOGRAFIA -->
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <!-- ICONOS -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet"
+    href="style.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <!-- LOGO -->
+        <div class="logo">
+
+            <img src="img/logo.jpeg"
+            alt="Logo">
+
+            <h1>lumine luxury</h1>
+
+        </div>
+
+        <!-- MENU -->
+        <nav id="menu">
+
+            <ul>
+
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#productos">
+                        Productos
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contacto">
+                        Contacto
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
+
+        <!-- BOTON MODO OSCURO -->
+
+        <button id="darkModeBtn"
+        class="dark-btn">
+
+            <i class="fa-solid fa-moon"></i>
+
+        </button>
+
+        <!-- MENU HAMBURGUESA -->
+
+        <div class="hamburguesa"
+        id="hamburguesa">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </div>
+
+    </header>
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h2>
+                Belleza y cuidado para tu piel
+            </h2>
+
+            <p>
+                Descubre productos diseñados
+                para hacerte sentir bien todos
+                los días.
+            </p>
+
+            <a href="#productos"
+            class="hero-btn">
+
+                Ver Productos
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+
+    <section class="sobre-mini">
+
+        <div class="sobre-mini-contenido">
+
+            <h2>
+                Sobre Nosotros
+            </h2>
+
+            <p>
+                Creamos productos pensados para el
+                cuidado, bienestar y belleza de tu piel,
+                combinando estética, suavidad y una
+                experiencia moderna.
+            </p>
+
+            <a href="#productos"
+            class="sobre-btn">
+
+                Explorar Productos
+
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- CARRUSEL -->
+
+    <section class="carrusel">
+
+        <div class="slides fade">
+
+            <img
+            src="img/crema_manos.jpg"
+            alt="Producto 1">
+
+        </div>
+
+        <div class="slides fade">
+
+            <img
+            src="img/exfoliante.jpg"
+            alt="Producto 2">
+
+        </div>
+
+        <div class="slides fade">
+
+            <img
+            src="img/perfume.jpg"
+            alt="Producto 3">
+
+        </div>
+
+    </section>
+
+    <!-- CATEGORIAS -->
+
+    <section class="categorias">
+
+        <h2>Categorías</h2>
+
+        <div class="contenedor-categorias">
+
+            <div class="categoria"
+            data-filter="crema">
+
+                🧴
+
+                <p>Cremas</p>
+
+            </div>
+
+            <div class="categoria"
+            data-filter="perfume">
+
+                🌸
+
+                <p>Perfumes</p>
+
+            </div>
+
+            <div class="categoria"
+            data-filter="exfoliante">
+
+                ✨
+
+                <p>Exfoliantes</p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- BUSCADOR -->
+
+    <section class="busqueda">
+
+        <input
+        type="text"
+        id="buscador"
+        placeholder="Buscar producto...">
+
+        <select id="filtro">
+
+            <option value="todos">
+                Todos
+            </option>
+
+            <option value="crema">
+                Cremas
+            </option>
+
+            <option value="perfume">
+                Perfumes
+            </option>
+
+            <option value="exfoliante">
+                Exfoliantes
+            </option>
+
+        </select>
+
+    </section>
+
+    <!-- PRODUCTOS -->
+
+    <section id="productos"
+    class="productos">
+
+        <div class="contenedor-productos">
+
+            <!-- PRODUCTO -->
+
+            <div class="card crema">
+
+                <img
+                src="img/crema_manos.jpg"
+                alt="Crema">
+
+                <h3>
+                    Crema de Manos
+                </h3>
+
+                <p>
+                    Hidratación profunda.
+                </p>
+
+            </div>
+
+            <!-- PRODUCTO -->
+
+            <div class="card exfoliante">
+
+                <img
+                src="img/exfoliante.jpg"
+                alt="Exfoliante">
+
+                <h3>
+                    Exfoliante Corporal
+                </h3>
+
+                <p>
+                    Revitaliza tu piel.
+                </p>
+
+            </div>
+
+            <!-- PRODUCTO -->
+
+            <div class="card perfume">
+
+                <img
+                src="img/perfume.jpg"
+                alt="Perfume">
+
+                <h3>
+                    Perfume Floral
+                </h3>
+
+                <p>
+                    Aroma elegante y fresco.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+
+    <footer id="contacto">
+
+        <h3>Contacto</h3>
+
+        <p>
+            Email:
+            lumine.luxury.2026@gmail.com
+        </p>
+
+        <a
+        href="https://www.instagram.com/lumine.luxur?igsh=bnY2NzQ0bDF4czNi"
+        target="_blank"
+        class="instagram-link">
+
+            <i class="fa-brands fa-instagram"></i>
+
+            Síguenos en Instagram
+
+        </a>
+
+    </footer>
+
+    <!-- BOTON ARRIBA -->
+
+    <button id="btnArriba">
+
+        <i class="fa-solid fa-arrow-up"></i>
+
+    </button>
+
+    <!-- JS -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
