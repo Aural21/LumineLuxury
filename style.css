@@ -137,18 +137,17 @@ nav a:hover::after{
     cursor: pointer;
 }
 
-/* HERO */
+/* =========================
+   HERO PREMIUM
+========================= */
 
 .hero{
 
-    min-height: 90vh;
+    position: relative;
 
-    background:
-    linear-gradient(
-        rgba(0,0,0,0.45),
-        rgba(0,0,0,0.45)
-    ),
+    min-height: 100vh;
 
+    background-image:
     url("https://via.placeholder.com/1600x900");
 
     background-size: cover;
@@ -164,45 +163,111 @@ nav a:hover::after{
     text-align: center;
 
     padding: 40px 10%;
+
+    overflow: hidden;
 }
 
-.hero-text{
+/* OVERLAY */
 
-    max-width: 800px;
+.overlay{
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.45)
+    );
+}
+
+/* CONTENIDO */
+
+.hero-contenido{
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 850px;
 
     color: white;
 
-    animation: aparecer 1.5s ease;
+    animation:
+    aparecer 1.5s ease;
 }
 
-.hero-text h2{
+/* TAG */
 
-    font-size: 65px;
-
-    font-weight: 700;
-
-    line-height: 1.1;
-
-    margin-bottom: 25px;
-}
-
-.hero-text p{
-
-    font-size: 20px;
-
-    font-weight: 300;
-
-    line-height: 1.8;
-
-    margin-bottom: 35px;
-}
-
-.hero-btn,
-.sobre-btn{
+.hero-tag{
 
     display: inline-block;
 
-    padding: 15px 35px;
+    padding: 10px 22px;
+
+    border-radius: 50px;
+
+    background-color:
+    rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(10px);
+
+    font-size: 15px;
+
+    margin-bottom: 25px;
+
+    letter-spacing: 1px;
+}
+
+/* TITULO */
+
+.hero-contenido h2{
+
+    font-size: 78px;
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    margin-bottom: 30px;
+}
+
+/* TEXTO */
+
+.hero-contenido p{
+
+    font-size: 22px;
+
+    line-height: 1.9;
+
+    font-weight: 300;
+
+    margin-bottom: 45px;
+}
+
+/* BOTONES */
+
+.hero-botones{
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+/* BOTON PRINCIPAL */
+
+.hero-btn{
+
+    display: inline-block;
+
+    padding: 16px 38px;
+
+    border-radius: 50px;
 
     background-color: #ff69b4;
 
@@ -210,19 +275,46 @@ nav a:hover::after{
 
     text-decoration: none;
 
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover{
+
+    transform: translateY(-5px);
+
+    background-color: #ff1493;
+}
+
+/* BOTON SECUNDARIO */
+
+.hero-btn-secundario{
+
+    display: inline-block;
+
+    padding: 16px 38px;
+
     border-radius: 50px;
+
+    border: 2px solid white;
+
+    color: white;
+
+    text-decoration: none;
 
     font-weight: 600;
 
     transition: 0.3s;
 }
 
-.hero-btn:hover,
-.sobre-btn:hover{
+.hero-btn-secundario:hover{
+
+    background-color: white;
+
+    color: black;
 
     transform: translateY(-5px);
-
-    background-color: #ff1493;
 }
 
 /* SOBRE NOSOTROS */
@@ -265,44 +357,6 @@ nav a:hover::after{
     margin-bottom: 40px;
 }
 
-/* CARRUSEL */
-
-.carrusel{
-
-    width: 100%;
-
-    height: 550px;
-
-    position: relative;
-
-    overflow: hidden;
-}
-
-.slides{
-
-    display: none;
-
-    width: 100%;
-
-    height: 100%;
-}
-
-.slides.active{
-    display: block;
-}
-
-.slides img{
-
-    width: 100%;
-
-    height: 550px;
-
-    object-fit: cover;
-
-    object-position: center center;
-
-    display: block;
-}
 
 /* CATEGORIAS */
 
@@ -599,6 +653,20 @@ body.dark .sobre-mini p{
 
     .sobre-mini p{
         font-size: 18px;
+    }
+    .hero-contenido h2{
+
+        font-size: 48px;
+    }
+
+    .hero-contenido p{
+
+        font-size: 18px;
+    }
+
+    .hero{
+
+        min-height: 85vh;
     }
 
 }

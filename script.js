@@ -118,40 +118,6 @@ categorias.forEach(categoria => {
 
 });
 
-
-// =========================
-// CARRUSEL AUTOMATICO
-// =========================
-
-let slideIndex = 0;
-
-const slides =
-document.querySelectorAll(".slides");
-
-function mostrarSlides(){
-
-    slides.forEach(slide => {
-
-        slide.classList.remove("active");
-
-    });
-
-    slideIndex++;
-
-    if(slideIndex > slides.length){
-
-        slideIndex = 1;
-    }
-
-    slides[slideIndex - 1]
-    .classList.add("active");
-
-}
-
-mostrarSlides();
-
-setInterval(mostrarSlides, 3000);
-
 // BOTON VOLVER ARRIBA
 
 const btnArriba =
