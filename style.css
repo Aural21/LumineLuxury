@@ -19,7 +19,8 @@ body{
 
 header{
 
-    background-color: #ffb6c1;
+    background:
+    rgba(255,182,193,0.9);
 
     display: flex;
 
@@ -27,7 +28,7 @@ header{
 
     align-items: center;
 
-    padding: 15px 10%;
+    padding: 10px 8%;
 
     position: sticky;
 
@@ -52,15 +53,16 @@ header{
 
 .logo img{
 
-    width: 50px;
+    width: 42px;
 
-    height: 50px;
-
-    border-radius: 50%;
+    height: 42px;
 }
 
 .logo h1{
-    color: white;
+
+    font-size: 24px;
+
+    font-weight: 700;
 }
 
 nav ul{
@@ -78,7 +80,9 @@ nav a{
 
     text-decoration: none;
 
-    font-weight: 500;
+    font-weight: 600;
+
+    letter-spacing: 0.5px;
 
     position: relative;
 
@@ -165,8 +169,6 @@ nav a:hover::after{
     padding: 40px 10%;
 }
 
-/* Overlay oscuro elegante */
-
 .overlay{
 
     position: absolute;
@@ -175,12 +177,10 @@ nav a:hover::after{
 
     background:
     linear-gradient(
-        rgba(0,0,0,0.45),
-        rgba(0,0,0,0.45)
+        rgba(0,0,0,0.58),
+        rgba(0,0,0,0.58)
     );
 }
-
-/* Contenido */
 
 .hero-contenido{
 
@@ -191,9 +191,10 @@ nav a:hover::after{
     max-width: 800px;
 
     color: white;
-}
 
-/* Etiqueta */
+    animation:
+    aparecer 1.5s ease;
+}
 
 .hero-tag{
 
@@ -215,8 +216,6 @@ nav a:hover::after{
     letter-spacing: 1px;
 }
 
-/* Título */
-
 .hero-contenido h2{
 
     font-size: 72px;
@@ -228,8 +227,6 @@ nav a:hover::after{
     font-weight: 700;
 }
 
-/* Texto */
-
 .hero-contenido p{
 
     font-size: 22px;
@@ -239,19 +236,28 @@ nav a:hover::after{
     margin-bottom: 40px;
 
     font-weight: 300;
-}
 
-/* Botón */
+    max-width: 500px;
+
+    margin-left: auto;
+
+    margin-right: auto;
+}
 
 .hero-btn{
 
     display: inline-block;
 
-    padding: 16px 40px;
+    padding: 18px 42px;
 
-    border-radius: 50px;
+    border-radius: 60px;
 
-    background: #ff69b4;
+    background:
+    linear-gradient(
+        135deg,
+        #ff69b4,
+        #ff1493
+    );
 
     color: white;
 
@@ -259,7 +265,22 @@ nav a:hover::after{
 
     font-weight: 600;
 
-    transition: 0.3s;
+    letter-spacing: 0.5px;
+
+    box-shadow:
+    0 10px 25px rgba(255,20,147,0.35);
+
+    transition: 0.35s;
+}
+
+.hero-btn:hover{
+
+    transform:
+    translateY(-5px)
+    scale(1.03);
+
+    box-shadow:
+    0 15px 35px rgba(255,20,147,0.45);
 }
 
 .hero-btn:hover{
@@ -269,147 +290,6 @@ nav a:hover::after{
     transform: translateY(-5px);
 }
 
-/* OVERLAY */
-
-.overlay{
-
-    position: absolute;
-
-    inset: 0;
-
-    background:
-    linear-gradient(
-        rgba(0,0,0,0.55),
-        rgba(0,0,0,0.45)
-    );
-}
-
-/* CONTENIDO */
-
-.hero-contenido{
-
-    position: relative;
-
-    z-index: 2;
-
-    max-width: 850px;
-
-    color: white;
-
-    animation:
-    aparecer 1.5s ease;
-}
-
-/* TAG */
-
-.hero-tag{
-
-    display: inline-block;
-
-    padding: 10px 22px;
-
-    border-radius: 50px;
-
-    background-color:
-    rgba(255,255,255,0.15);
-
-    backdrop-filter: blur(10px);
-
-    font-size: 15px;
-
-    margin-bottom: 25px;
-
-    letter-spacing: 1px;
-}
-
-/* TITULO */
-
-.hero-contenido h2{
-
-    font-size: 78px;
-
-    line-height: 1.05;
-
-    font-weight: 700;
-
-    margin-bottom: 30px;
-}
-
-/* TEXTO */
-
-.hero-contenido p{
-
-    font-size: 22px;
-
-    line-height: 1.9;
-
-    font-weight: 300;
-
-    margin-bottom: 45px;
-}
-
-/* BOTONES */
-
-.hero-botones{
-
-    display: flex;
-
-    justify-content: center;
-
-    gap: 20px;
-
-    flex-wrap: wrap;
-}
-
-/* BOTON PRINCIPAL */
-
-.hero-btn{
-
-    display: inline-block;
-
-    padding: 16px 38px;
-
-    border-radius: 50px;
-
-    background-color: #ff69b4;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-weight: 600;
-
-    transition: 0.3s;
-}
-
-.hero-btn:hover{
-
-    transform: translateY(-5px);
-
-    background-color: #ff1493;
-}
-
-/* BOTON SECUNDARIO */
-
-.hero-btn-secundario{
-
-    display: inline-block;
-
-    padding: 16px 38px;
-
-    border-radius: 50px;
-
-    border: 2px solid white;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-weight: 600;
-
-    transition: 0.3s;
-}
-
 .hero-btn-secundario:hover{
 
     background-color: white;
@@ -417,6 +297,14 @@ nav a:hover::after{
     color: black;
 
     transform: translateY(-5px);
+}
+
+.hero-contenido p{
+
+    max-width: 700px;
+
+    margin:
+    0 auto 40px;
 }
 
 /* SOBRE NOSOTROS */
@@ -570,14 +458,14 @@ nav a:hover::after{
 
     background-color: white;
 
-    border-radius: 15px;
+    border-radius: 22px;
 
     overflow: hidden;
 
     box-shadow:
-    0 5px 15px rgba(0,0,0,0.1);
+    0 10px 25px rgba(0,0,0,0.08);
 
-    transition: 0.3s;
+    transition: 0.35s;
 }
 
 .card:hover{
@@ -588,7 +476,12 @@ nav a:hover::after{
 }
 
 .card img{
+
     width: 100%;
+
+    height: 320px;
+
+    object-fit: cover;
 }
 
 .card h3{
@@ -641,7 +534,12 @@ footer{
 
     border-radius: 50%;
 
-    background-color: #ff69b4;
+    background:
+    linear-gradient(
+        135deg,
+        #ff69b4,
+        #ff1493
+    );
 
     color: white;
 
@@ -681,17 +579,6 @@ body.dark .sobre-mini p{
 }
 
 /* ANIMACIONES */
-
-@keyframes fade{
-
-    from{
-        opacity: 0.4;
-    }
-
-    to{
-        opacity: 1;
-    }
-}
 
 @keyframes aparecer{
 
@@ -741,14 +628,6 @@ body.dark .sobre-mini p{
         display: block;
     }
 
-    .hero-text h2{
-        font-size: 42px;
-    }
-
-    .hero-text p{
-        font-size: 17px;
-    }
-
     .sobre-mini h2{
         font-size: 34px;
     }
@@ -756,9 +635,19 @@ body.dark .sobre-mini p{
     .sobre-mini p{
         font-size: 18px;
     }
+
     .hero-contenido h2{
 
         font-size: 48px;
+
+        line-height: 1.05;
+    }   
+
+    .hero-btn{
+
+        width: 100%;
+
+        max-width: 320px;
     }
 
     .hero-contenido p{
@@ -771,4 +660,45 @@ body.dark .sobre-mini p{
         min-height: 85vh;
     }
 
+        /* HEADER MOBILE */
+
+    header{
+
+        padding: 15px 5%;
+    }
+
+    .logo{
+
+        gap: 10px;
+    }
+
+    .logo img{
+
+        width: 60px;
+    }
+
+    .logo h1{
+
+        font-size: 28px;
+
+        line-height: 1.1;
+    }
+
+    .hero{
+
+        min-height: 80vh;
+
+        padding: 120px 7% 80px;
+    }
+
+}
+/* ICONOS HEADER */
+
+.nav-icons{
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
 }
