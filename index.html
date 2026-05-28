@@ -165,7 +165,7 @@
         <div class="contenedor-categorias">
 
             <div class="categoria"
-            data-filter="crema">
+            data-filter="cremas">
 
                 🧴
 
@@ -174,7 +174,7 @@
             </div>
 
             <div class="categoria"
-            data-filter="perfume">
+            data-filter="perfumes">
 
                 🌸
 
@@ -183,7 +183,7 @@
             </div>
 
             <div class="categoria"
-            data-filter="exfoliante">
+            data-filter="exfoliantes">
 
                 ✨
 
@@ -204,22 +204,22 @@
         id="buscador"
         placeholder="Buscar producto...">
 
-        <select id="filtro">
+        <select id="filtroCategoria">
 
             <option value="todos">
-                Todos
+                Todas las categorías
             </option>
 
-            <option value="crema">
-                Cremas
-            </option>
-
-            <option value="perfume">
+            <option value="perfumes">
                 Perfumes
             </option>
 
-            <option value="exfoliante">
+            <option value="exfoliantes">
                 Exfoliantes
+            </option>
+
+            <option value="cremas">
+                Cremas
             </option>
 
         </select>
@@ -235,7 +235,9 @@
 
             <!-- PRODUCTO -->
 
-            <div class="card crema">
+            <div class="card"
+            data-nombre="Crema de Manos"
+            data-categoria="cremas">
 
                 <img
                 src="img/crema_manos.jpg"
@@ -253,7 +255,9 @@
 
             <!-- PRODUCTO -->
 
-            <div class="card exfoliante">
+            <div class="card"
+            data-nombre="Exfoliante"
+            data-categoria="exfoliantes">
 
                 <img
                 src="img/exfoliante.jpg"
@@ -270,20 +274,16 @@
             </div>
 
             <!-- PRODUCTO -->
-
-            <div class="card perfume">
+            <div class="card"
+            data-nombre="Perfume Floral"
+            data-categoria="perfumes">
 
                 <img
-                src="img/perfume.jpg"
-                alt="Perfume">
+                src="img/perfume.jpg">
 
-                <h3>
-                    Perfume Floral
-                </h3>
+                <h3>Perfume Floral</h3>
 
-                <p>
-                    Aroma elegante y fresco.
-                </p>
+                <p>Fragancia premium.</p>
 
             </div>
 

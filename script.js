@@ -1,37 +1,68 @@
+// ==========================
 // MENU HAMBURGUESA
+// ==========================
 
 const hamburguesa =
-document.getElementById("hamburguesa");
+document.querySelector(".menu-toggle");
 
-const menu =
-document.getElementById("menu");
+const nav =
+document.querySelector("nav");
 
 hamburguesa.addEventListener("click", () => {
 
-    menu.classList.toggle("active");
-
+    nav.classList.toggle("active");
 });
 
-
+// ==========================
 // MODO OSCURO
+// ==========================
 
-const darkModeBtn =
-document.getElementById("darkModeBtn");
+const darkBtn =
+document.querySelector("#darkModeToggle");
 
-darkModeBtn.addEventListener("click", () => {
+darkBtn.addEventListener("click", () => {
 
     document.body.classList.toggle("dark");
-
 });
 
+// ==========================
+// BOTON VOLVER ARRIBA
+// ==========================
 
-// BUSCADOR Y FILTRO
+const btnArriba =
+document.getElementById("btnArriba");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 300){
+
+        btnArriba.style.display = "block";
+
+    }else{
+
+        btnArriba.style.display = "none";
+    }
+});
+
+btnArriba.addEventListener("click", () => {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+    });
+});
+
+// ==========================
+// BUSCADOR + FILTRO
+// ==========================
 
 const buscador =
 document.getElementById("buscador");
 
 const filtro =
-document.getElementById("filtro");
+document.getElementById("filtroCategoria");
 
 const productos =
 document.querySelectorAll(".card");
@@ -47,45 +78,34 @@ function filtrarProductos(){
     productos.forEach(producto => {
 
         const nombre =
-        producto.querySelector("h3")
-        .textContent
-        .toLowerCase();
+        producto.dataset.nombre.toLowerCase();
+
+        const categoriaProducto =
+        producto.dataset.categoria;
 
         const coincideTexto =
         nombre.includes(texto);
 
         const coincideCategoria =
-        categoria === "todos" ||
-        producto.classList.contains(categoria);
 
-        if(
-            coincideTexto &&
-            coincideCategoria
-        ){
+            categoria === "todos" ||
 
-            producto.style.display = "block";
+            categoriaProducto === categoria;
+
+        if(coincideTexto && coincideCategoria){
+
+            producto.style.display = "";
 
         }else{
 
             producto.style.display = "none";
         }
-
     });
 
 }
-
-buscador.addEventListener(
-    "keyup",
-    filtrarProductos
-);
-
-filtro.addEventListener(
-    "change",
-    filtrarProductos
-);
-
-
+// ==========================
 // CATEGORIAS VISUALES
+// ==========================
 
 const categorias =
 document.querySelectorAll(".categoria");
@@ -94,56 +114,21 @@ categorias.forEach(categoria => {
 
     categoria.addEventListener("click", () => {
 
-        const filtroCategoria =
+        const valor =
         categoria.dataset.filter;
 
-        productos.forEach(producto => {
+        filtro.value = valor;
 
-            if(
-                producto.classList.contains(
-                    filtroCategoria
-                )
-            ){
-
-                producto.style.display = "block";
-
-            }else{
-
-                producto.style.display = "none";
-            }
-
-        });
-
+        filtrarProductos();
     });
-
 });
 
-// BOTON VOLVER ARRIBA
+buscador.addEventListener(
+    "input",
+    filtrarProductos
+);
 
-const btnArriba =
-document.getElementById("btnArriba");
-
-window.addEventListener("scroll", () => {
-
-    if(window.scrollY > 300){
-
-        btnArriba.style.display = "block";
-
-    }else{
-
-        btnArriba.style.display = "none";
-    }
-
-});
-
-btnArriba.addEventListener("click", () => {
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
-
-    });
-
-});
+filtro.addEventListener(
+    "change",
+    filtrarProductos
+);
